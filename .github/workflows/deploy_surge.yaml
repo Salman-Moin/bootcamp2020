@@ -17,8 +17,6 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-<<<<<<< HEAD
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
@@ -30,24 +28,4 @@ jobs:
         run: npm install -global surge
       - name: Deploying surge
         run: surge ./ bootcamp2020_salman.surge.sh --token ${{secrets.SURGE_TOKEN}}
-=======
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-
-    # Runs a single command using the runners shell
-    - name: Installing Node
-      run: actions/setup-node@v2-beta
-      with: 
-        node-version: 12
-    - name: Installing Surge
-      run: npm install -global surge
-    - name: Deploying surge 
-      run: surge ./ bootcamp2020_salman.surge.sh --token ${{secrets.SURGE_TOKEN}}
-
-
-
-
-
-
-
->>>>>>> 3809d88a3aa0a6e08219b3aff276450de2980045
+        
